@@ -1,7 +1,7 @@
 # pruning_based_on_importance_and_redundancy
 
 ## Abstract
-Convolutional neural networks (CNNs) have become the architecture of choice for state-of-the-art computer vision algorithms. However, CNNs have high computational cost, and this can limit their application, particularly in mobile devices [8]. In order to address this, several pruning techniques have been suggested [1, 2, 3, 4, 5, 6] to remove as many filters as possible with minimal impact on accuracy. However, most of the current approaches remove filters based on a proposed metric for how much information a filter contains independently (filter importance). We believe that effective pruning strategies should be based on eliminating filters based on importance and compressing layers based on redundancy. In this work, we propose a filter redundancy metric based on correlation. We also propose a pruning methodology that first eliminates filters based on importance and subsequently eliminates filters based on redundancy. We demonstrate our methodology on VGG16 with CIFAR-10[17] dataset. 
+Convolutional neural networks (CNNs) have become the architecture of choice for state-of-the-art computer vision algorithms. However, CNNs have high computational cost, and this can limit their application, particularly in mobile devices. In order to address this, several pruning techniques have been suggested to remove as many filters as possible with minimal impact on accuracy. However, most of the current approaches remove filters based on a proposed metric for how much information a filter contains independently (filter importance). We believe that effective pruning strategies should be based on eliminating filters based on importance and compressing layers based on redundancy. In this work, we propose a filter redundancy metric based on correlation. We also propose a pruning methodology that first eliminates filters based on importance and subsequently eliminates filters based on redundancy. We demonstrate our methodology on VGG16 with CIFAR-10 dataset. 
 
 ## Running the code
 
@@ -28,7 +28,7 @@ There are two ways of running the code, the first one is using a pre-trained vgg
 ```
         python vgg16_pruning_based_on_importance_and_redundancy.py 0.3 0.8 
 ```
-This should generate a file with the name "data_stats0.80.3" which contains both the accuracy and the pruning ratio information, the file name is of the format "data_stats<S><E>"
+This should generate a file with the name "data_stats0.80.3" which contains both the accuracy and the pruning ratio information. The file name is of the format "data_stats\<S\>\<E\>", where "\<S\>" is the redundancy threshold and "\<E\>" is the entropy threshold.
  
 ### Running without the pre-trained model  
 * Run the following code, note that the first argument is the threshold for entropy and the second argument is the threshold for similarity
@@ -37,6 +37,6 @@ This should generate a file with the name "data_stats0.80.3" which contains both
         python vgg16_pruning_based_on_importance_and_redundancy_no_pretrained.py 0.3 0.8 
 ```
 
-This should generate a file with the name "data_stats0.80.3" which contains both the accuracy and the pruning ratio information, the file name is of the format "data_stats<S><E>"
+This should generate a file with the name "data_stats0.80.3" which contains both the accuracy and the pruning ratio information. The file name is of the format "data_stats\<S\>\<E\>", where "\<S\>" is the redundancy threshold and "\<E\>" is the entropy threshold.
 
  
