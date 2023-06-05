@@ -14,16 +14,16 @@ git clone this repo by doing the following :
 ```
 
 
-There are two ways of running the code, the first one is using a pre-trained vgg-16 model to save training time (the weights need to be downloaded from google drive) and then running the algorithm. The second way is to run the model by first training the model and then running the algorithm.
+There are two ways of running the code, the first one is using a pre-trained vgg-16 model to save training time (the weights need to be downloaded from google drive) and then running the algorithm on this model. The second way is first train the base model from scratch and then running the algorithm (this is in case, you do not want to download the training data from google drive. Both ways should yield similar results).
  
 ### Running with the pre-trained model 
 
 * Download the "training_4" directory from this google drive https://drive.google.com/drive/folders/1Yd-DQnG-Borb_N87-pcw2Vfrss17gRBx?usp=share_link 
-  * Copy this directory into the "pruning_based_on_importance_and_redundancy" directory, which should have been created when you git clone this repo
-  * **Make sure the "training_4" directory is in the same level as the python script**
-  * This directory should have 3 files - "checkpoint", "cp.ckpt.data-00000-of-00001" and "cp.ckpt.index"
+  * Copy this directory into the "pruning_based_on_importance_and_redundancy" directory, which should have been created when you git clone this repo.
+  * **Make sure the "training_4" directory is in the same level as the python script.**
+  * This directory should have 3 files - "checkpoint", "cp.ckpt.data-00000-of-00001" and "cp.ckpt.index".
 
-* Now run the following, note that the first argument is the threshold for entropy and the second argument is the threshold for similarity
+* Now run the following, note that the first argument is the threshold for entropy and the second argument is the threshold for Redundancy
 
 ```
         python vgg16_pruning_based_on_importance_and_redundancy.py 0.3 0.8 
@@ -31,7 +31,7 @@ There are two ways of running the code, the first one is using a pre-trained vgg
 This should generate a file with the name "data_stats0.80.3" which contains both the accuracy and the pruning ratio information. The file name is of the format "data_stats\<S\>\<E\>", where "\<S\>" is the redundancy threshold and "\<E\>" is the entropy threshold.
  
 ### Running without the pre-trained model  
-* Run the following code, note that the first argument is the threshold for entropy and the second argument is the threshold for similarity
+* Run the following code, note that the first argument is the threshold for entropy and the second argument is the threshold for Redundancy.
 
 ```
         python vgg16_pruning_based_on_importance_and_redundancy_no_pretrained.py 0.3 0.8 
