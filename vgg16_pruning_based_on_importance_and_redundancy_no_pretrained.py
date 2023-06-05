@@ -146,7 +146,7 @@ ModelLoss, ModelAccuracy = model.evaluate(x_test, y_test_cat)
 # model.load_weights(checkpoint_path)
 
 # Train the model, you can uncomment this if you want to further train this model 
-model.fit(x_train, y_train_cat, epochs=100, batch_size=128)
+model.fit(x_train, y_train_cat, epochs=400, batch_size=128)
 
 # Test the accuracy of the base model 
 ModelLoss, ModelAccuracy = model.evaluate(x_test, y_test_cat)
