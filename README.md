@@ -15,7 +15,7 @@ Convolutional neural networks (CNNs) have become the architecture of choice for 
 * cd to the directory "pruning_based_on_importance_and_redundancy"
 
 ### Running the code
-**There are two ways of running this code. In the first one, we start by training the base VGG-16 model from scratch and then run the algorithm (training takes about 1-2 hours to run). In the second way, we use a pre-trained VGG-16 model to save training time (the weights need to be downloaded from google drive) and then run the algorithm on this model. Both ways should yield similar results).**
+**There are two ways of running this code. In the first one, we start by training the base VGG-16 model from scratch and then run the algorithm (training takes about 1-2 hours to run). In the second way, we use a pre-trained VGG-16 model to save training time (the weights need to be downloaded from google drive) and then run the algorithm on this model. Both ways should yield similar results.**
 
 ### Running without the pre-trained model  
 * Run the following code, note that the first argument is the threshold for entropy and the second argument is the threshold for Redundancy.
