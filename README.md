@@ -15,8 +15,17 @@ Convolutional neural networks (CNNs) have become the architecture of choice for 
 * cd to the directory "pruning_based_on_importance_and_redundancy"
 
 ### Running the code
-**There are two ways of running the code, the first one is using a pre-trained vgg-16 model to save training time (the weights need to be downloaded from google drive) and then running the algorithm on this model. The second way is first train the base model from scratch and then running the algorithm (this is in case, you do not want to download the training data from google drive. Both ways should yield similar results).***
- 
+**There are two ways of running this code. In the first one, we start by training the base VGG-16 model from scratch and then run the algorithm (training takes about 1-2 hours to run). In the second way, we use a pre-trained VGG-16 model to save training time (the weights need to be downloaded from google drive) and then run the algorithm on this model. Both ways should yield similar results).**
+
+### Running without the pre-trained model  
+* Run the following code, note that the first argument is the threshold for entropy and the second argument is the threshold for Redundancy.
+
+```
+        python vgg16_pruning_based_on_importance_and_redundancy_no_pretrained.py 0.3 0.8 
+```
+
+This should generate a file with the name "data_stats0.80.3" which contains both the accuracy and the pruning ratio information. The file name is of the format "data_stats\<S\>\<E\>", where "\<S\>" is the redundancy threshold and "\<E\>" is the entropy threshold.
+
 ### Running with the pre-trained model 
 
 * Download the "training_4" directory from this google drive https://drive.google.com/drive/folders/1Yd-DQnG-Borb_N87-pcw2Vfrss17gRBx?usp=share_link 
@@ -30,14 +39,6 @@ Convolutional neural networks (CNNs) have become the architecture of choice for 
         python vgg16_pruning_based_on_importance_and_redundancy.py 0.3 0.8 
 ```
 This should generate a file with the name "data_stats0.80.3" which contains both the accuracy and the pruning ratio information. The file name is of the format "data_stats\<S\>\<E\>", where "\<S\>" is the redundancy threshold and "\<E\>" is the entropy threshold.
- 
-### Running without the pre-trained model  
-* Run the following code, note that the first argument is the threshold for entropy and the second argument is the threshold for Redundancy.
 
-```
-        python vgg16_pruning_based_on_importance_and_redundancy_no_pretrained.py 0.3 0.8 
-```
-
-This should generate a file with the name "data_stats0.80.3" which contains both the accuracy and the pruning ratio information. The file name is of the format "data_stats\<S\>\<E\>", where "\<S\>" is the redundancy threshold and "\<E\>" is the entropy threshold.
 
  
