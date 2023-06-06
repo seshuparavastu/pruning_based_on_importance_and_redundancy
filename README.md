@@ -3,18 +3,19 @@
 ## Abstract
 Convolutional neural networks (CNNs) have become the architecture of choice for state-of-the-art computer vision algorithms. However, CNNs have high computational cost, and this can limit their application, particularly in mobile devices. In order to address this, several pruning techniques have been suggested to remove as many filters as possible with minimal impact on accuracy. However, most of the current approaches remove filters based on a proposed metric for how much information a filter contains independently (filter importance). We believe that effective pruning strategies should be based on eliminating filters based on importance and compressing layers based on redundancy. In this work, we propose a filter redundancy metric based on correlation. We also propose a pruning methodology that first eliminates filters based on importance and subsequently eliminates filters based on redundancy. We demonstrate our methodology on VGG16 with CIFAR-10 dataset. 
 
-## Running the code
+## CODE SETUP AND RUNNING
 
-
-git clone this repo by doing the following : 
+### Setup
+ * git clone this repo by doing the following : 
 
 
 ```
        git clone https://github.com/seshuparavastu/pruning_based_on_importance_and_redundancy.git
 ```
-cd to the directory "pruning_based_on_importance_and_redundancy"
+* cd to the directory "pruning_based_on_importance_and_redundancy"
 
-There are two ways of running the code, the first one is using a pre-trained vgg-16 model to save training time (the weights need to be downloaded from google drive) and then running the algorithm on this model. The second way is first train the base model from scratch and then running the algorithm (this is in case, you do not want to download the training data from google drive. Both ways should yield similar results).
+### Running the code
+**There are two ways of running the code, the first one is using a pre-trained vgg-16 model to save training time (the weights need to be downloaded from google drive) and then running the algorithm on this model. The second way is first train the base model from scratch and then running the algorithm (this is in case, you do not want to download the training data from google drive. Both ways should yield similar results).***
  
 ### Running with the pre-trained model 
 
