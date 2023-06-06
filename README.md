@@ -29,9 +29,12 @@ This should generate a file with the name "data_stats0.80.3" which contains both
 ### Running with the pre-trained model 
 
 * Download the "training_4" directory from this google drive https://drive.google.com/drive/folders/1Yd-DQnG-Borb_N87-pcw2Vfrss17gRBx?usp=share_link 
-  * Copy this directory into the "pruning_based_on_importance_and_redundancy" directory, which should have been created when you git clone this repo.
-  * **Make sure the "training_4" directory is in the same level as the python script.**
-  * This directory should have 3 files - "checkpoint", "cp.ckpt.data-00000-of-00001" and "cp.ckpt.index".
+  * One way to do this is using gdown 
+      ```
+       gdown --folder https://drive.google.com/drive/folders/1Yd-DQnG-Borb_N87-pcw2Vfrss17gRBx?usp=share_link  
+      ```
+   * **Make sure the "training_4" directory is in the same level as the python script.**
+   * This directory should have 3 files - "checkpoint", "cp.ckpt.data-00000-of-00001" and "cp.ckpt.index".
 
 * Now run the following, note that the first argument is the threshold for entropy and the second argument is the threshold for Redundancy
 
