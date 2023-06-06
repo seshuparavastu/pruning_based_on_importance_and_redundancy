@@ -43,5 +43,7 @@ This should generate a file with the name "data_stats0.80.3" which contains both
 ```
 This should generate a file with the name "data_stats0.80.3" which contains both the accuracy and the pruning ratio information. The file name is of the format "data_stats\<S\>\<E\>", where "\<S\>" is the redundancy threshold and "\<E\>" is the entropy threshold.
 
+NOTE : In this code we simulate pruning by zero-ing out the weights and biases of the filter
+
 
  
