@@ -12,7 +12,7 @@ git clone this repo by doing the following :
 ```
        git clone https://github.com/seshuparavastu/pruning_based_on_importance_and_redundancy.git
 ```
-
+cd to the directory "pruning_based_on_importance_and_redundancy"
 
 There are two ways of running the code, the first one is using a pre-trained vgg-16 model to save training time (the weights need to be downloaded from google drive) and then running the algorithm on this model. The second way is first train the base model from scratch and then running the algorithm (this is in case, you do not want to download the training data from google drive. Both ways should yield similar results).
  
